@@ -144,7 +144,7 @@ function SkillBar({ name, pct }) {
 }
 
 // ─── SECTION WRAPPER ───────────────────────────────────────────────────────
-function Section({ id, children, style }) {
+function Section({ id, children, style = {} }: { id: string; children: React.ReactNode; style?: React.CSSProperties }) {
     const ref = useRef(null);
     const [vis, setVis] = useState(false);
     useEffect(() => {
