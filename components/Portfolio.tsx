@@ -174,7 +174,8 @@ function Nav({ dark, setDark }) {
             <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
                 {links.map(l => (
                     <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: 12, letterSpacing: 1.5, color: "#888", textDecoration: "none", textTransform: "uppercase", transition: "color .2s" }}
-                        onMouseEnter={e => e.target.style.color = "#00f5c4"} onMouseLeave={e => e.target.style.color = "#888"}>{l}</a>
+                         onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#00f5c4"}
+                         onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#888"}>{l}</a>
                 ))}
                 <button onClick={() => setDark(d => !d)} style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 20, padding: "5px 14px", color: "#aaa", cursor: "pointer", fontSize: 12 }}>
                     {dark ? "☀ Light" : "◑ Dark"}
