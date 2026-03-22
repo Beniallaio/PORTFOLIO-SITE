@@ -62,8 +62,7 @@ const DATA = {
 };
 
 // ─── TYPING EFFECT ─────────────────────────────────────────────────────────
-function TypeWriter({ words }) {
-    const [display, setDisplay] = useState("");
+function TypeWriter({ words }: { words: string[] }) {    const [display, setDisplay] = useState("");
     const [wi, setWi] = useState(0);
     const [ci, setCi] = useState(0);
     const [del, setDel] = useState(false);
